@@ -1,0 +1,112 @@
+[
+  {
+  	"Company Name": "8ninths",
+  	"State": "WA",
+  	"City": "Seattle",
+  	"Country": "United States",
+  	"Size": "11 - 50",
+  	"Stack": "Javascript",
+  	"Date of Last Hire": "8/5/2014",
+  	"Salary": "72,500"
+  },
+  {
+  	"Company Name": "Affinity Gaming",
+  	"State": "NV",
+  	"City": "Las Vegas",
+  	"Country": "United States",
+  	"Size": "1,001 - 5,000",
+  	"Stack": "Rails",
+  	"Date of Last Hire": "6/1/2015",
+  	"Salary": "30,000"
+  },
+  {
+  	"Company Name": "Blueprint Consulting Services, LLC",
+  	"State": "WA",
+  	"City": "Bellevue",
+  	"Country": "United States",
+  	"Size": "51 - 200",
+  	"Stack": "iOS",
+  	"Date of Last Hire": "3/1/2015",
+  	"Salary": ""
+  },
+  {
+  	"Company Name": "HealthSparq",
+  	"State": "OR",
+  	"City": "Portland",
+  	"Country": "United States",
+  	"Size": "51 - 200",
+  	"Stack": "Python",
+  	"Date of Last Hire": "5/1/2015",
+  	"Salary": ""
+  },
+  {
+  	"Company Name": "iSoftStone",
+  	"State": "WA",
+  	"City": "Kirkland",
+  	"Country": "United States",
+  	"Size": "> 10,000",
+  	"Stack": "UXE",
+  	"Date of Last Hire": "2/13/2015",
+  	"Salary": "72,000"
+  },
+  {
+  	"Company Name": "DC Health Benefit Exchange Authority",
+  	"State": "",
+  	"City": "Washington D.C.",
+  	"Country": "United States",
+  	"Size": "11 - 50",
+  	"Stack": "Rails",
+  	"Date of Last Hire": "5/27/2014",
+  	"Salary": "76,800"
+  },
+  {
+  	"Company Name": "Eventemo",
+  	"State": "",
+  	"City": "London",
+  	"Country": "United Kingdom",
+  	"Size": "11 - 50",
+  	"Stack": "JavaScript",
+  	"Date of Last Hire": "6/1/2015",
+  	"Salary": ""
+  },
+  {
+  	"Company Name": "Fidelity Investments",
+  	"State": "MA",
+  	"City": "Boston",
+  	"Size": "> 10,000",
+  	"Country": "United States",
+  	"Stack": "Javascript",
+  	"Date of Last Hire": "11/20/2015",
+  	"Salary": "70,000"
+  },
+  {
+  	"Company Name": "Financial Recovery Technologies",
+  	"State": "MA",
+  	"City": "Medford",
+  	"Country": "United States",
+  	"Size": "11 - 50",
+  	"Stack": "Rails",
+  	"Date of Last Hire": "",
+  	"Salary": ""
+  },
+  {
+  	"Company Name": "Flowroute",
+  	"State": "CA",
+  	"City": "Oceanside",
+  	"Country": "United States",
+  	"Size": "11 - 50",
+  	"Stack": "Python",
+  	"Date of Last Hire": "1/19/2015",
+  	"Salary": ""
+  },
+  {
+  	"Company Name": "Fuze, Inc.",
+  	"State": "CA",
+  	"City": "San Francisco",
+  	"Country": "United States",
+  	"Size": "100 - 500",
+  	"Stack": "Rails",
+  	"Date of Last Hire": "04/01/2014",
+  	"Salary": "155,000"
+  }
+]
