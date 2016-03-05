@@ -6,6 +6,11 @@ First, install dependencies with
 
     $ npm install
 
+Next, install webpack and webpack-dev-server globally
+
+    $ npm install -g webpack
+    $ npm install -g webpack-dev-server
+
 Then, build with
 
     $ webpack
