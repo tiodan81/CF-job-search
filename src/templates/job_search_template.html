@@ -26,10 +26,9 @@
     <option value="large">Large</option>
     <option value="huge">Huge</option>
   </select>
-
 </div>
 <div class="job-list" data-ng-repeat="job in jobs | filter:keyword | filter:stackFunction | filter:cityFunction | filter:sizeFunction">
   <div class="job-item">
-    <a href="" data-ng-click="seeCompany">{{job.company}}</a>
+    <a href="#/company/{{job.company}}">{{job.company}}</a>
   </div>
 </div>

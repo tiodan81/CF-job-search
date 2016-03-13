@@ -1,6 +1,6 @@
 var fakeData = [
   {
-  	"company": "Disney",
+  	"company": "Alaska Airlines",
   	"state": "WA",
   	"city": "Seattle",
   	"country": "United States",
@@ -171,6 +171,14 @@ module.exports = function(app) {
     return {
       getJobs: function() {
         return fakeData;
+      },
+      getCompany: function(company) {
+        for (var i = 0; i < fakeData.length; i++) {
+          if (fakeData[i].company === company) {
+            return fakeData[i];
+          }
+        }
+        return false;
       }
     };
   });
