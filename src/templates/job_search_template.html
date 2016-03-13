@@ -1,6 +1,30 @@
 <div class="side-bar">
+  <label for="keyword">Keyword</label>
+  <input type="text" name="keyword" id="keyword" data-ng-model="keyword"></input>
+
+  <label>Stack</label>
+  <input type="checkbox" name="ios" data-ng-model="stack.ios">iOS
+  <input type="checkbox" name="ruby" data-ng-model="stack.ruby">Ruby
+  <input type="checkbox" name="js" data-ng-model="stack.js">JavaScript
+  <input type="checkbox" name="python" data-ng-model="stack.python">Python
+  <input type="checkbox" name="ux" data-ng-model="stack.ux">UX
+
+  <label for="location">Location</label>
+  <select id="location" data-ng-model="city" data-ng-options="job.city group by job.state for job in jobs | unique:'city'">
+    <option value="">Any</option>
+  </select>
+
+  <label for="size">Company Size</label>
+  <select id="size" data-ng-model="size">
+    <option value="">Any</option>
+    <option value="tiny">Tiny</option>
+    <option value="small">Small</option>
+    <option value="medium">Medium</option>
+    <option value="large">Large</option>
+    <option value="huge">Huge</option>
+  </select>
 
 </div>
-<div class="job-list" data-ng-repeat="job in jobs">
+<div class="job-list" data-ng-repeat="job in jobs | stackFilter:stack">
   {{job}}
 </div>

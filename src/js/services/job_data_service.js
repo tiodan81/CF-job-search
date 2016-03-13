@@ -32,7 +32,7 @@ var fakeData = [
   {
   	"company": "Microsoft",
   	"state": "WA",
-  	"city": "Bellevue",
+  	"city": "Seattle",
   	"country": "United States",
   	"size": "huge",
   	"lastHire": "3/1/2015",
