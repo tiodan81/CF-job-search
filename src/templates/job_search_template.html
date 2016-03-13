@@ -2,15 +2,18 @@
   <label for="keyword">Keyword</label>
   <input type="text" name="keyword" id="keyword" data-ng-model="keyword"></input>
 
-  <label>Stack</label>
-  <input type="checkbox" name="ios" data-ng-model="stack.ios">iOS
-  <input type="checkbox" name="ruby" data-ng-model="stack.ruby">Ruby
-  <input type="checkbox" name="js" data-ng-model="stack.js">JavaScript
-  <input type="checkbox" name="python" data-ng-model="stack.python">Python
-  <input type="checkbox" name="ux" data-ng-model="stack.ux">UX
+  <label for="stack">Stack</label>
+  <select id="stack" data-ng-model="stack">
+    <option value="">Any</option>
+    <option value="ios">iOS</option>
+    <option value="ruby">Ruby</option>
+    <option value="js">JavaScript</option>
+    <option value="python">Python</option>
+    <option value="ux">UX</option>
+  </select>
 
   <label for="location">Location</label>
-  <select id="location" data-ng-model="city" data-ng-options="job.city group by job.state for job in jobs | unique:'city'">
+  <select id="location" data-ng-model="city" data-ng-options="job.city as job.city group by job.state for job in jobs | unique:'city'">
     <option value="">Any</option>
   </select>
 
@@ -25,6 +28,8 @@
   </select>
 
 </div>
-<div class="job-list" data-ng-repeat="job in jobs | stackFilter:stack">
-  {{job}}
+<div class="job-list" data-ng-repeat="job in jobs | filter:keyword | filter:stackFunction | filter:cityFunction | filter:sizeFunction">
+  <div class="job-item">
+    <a href="" data-ng-click="seeCompany">{{job.company}}</a>
+  </div>
 </div>
