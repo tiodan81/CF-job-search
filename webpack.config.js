@@ -29,5 +29,11 @@ module.exports = {
         loaders: ['style', 'css', 'sass']
       }
     ]
+  },
+  devServer: {
+    proxy: [{
+      path: '/api/*',
+      target: 'http://localhost:3000'
+    }]
   }
 };
