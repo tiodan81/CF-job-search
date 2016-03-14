@@ -8,7 +8,6 @@ app.get('/api/glassdoor/:name', function(req, res) {
   var apiUrl = 'http://api.glassdoor.com/api/api.htm?v=1&format=json&t.p=' + apiId +
                '&t.k=' + apiKey +
                '&action=employers&q=' + req.params.name;
-  console.log(req.params.name);
   request(apiUrl, function(err, request, body) {
     res.send(body);
   });

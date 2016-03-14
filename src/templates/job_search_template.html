@@ -29,6 +29,11 @@
 </div>
 <div class="job-list" data-ng-repeat="job in jobs | filter:keyword | filter:stackFunction | filter:cityFunction | filter:sizeFunction">
   <div class="job-item">
-    <a href="#/company/{{job.company}}">{{job.company}}</a>
+    <a href="#/company/{{job.company}}">{{job.company}}</a><br>
+    City: {{job.city}}<br>
+    iOS: {{job.ios}}<br>
+    Ruby: {{job.ruby}}<br>
+    JavaScript: {{job.js}}<br>
+    UX: {{job.ux}}<br>
   </div>
 </div>
