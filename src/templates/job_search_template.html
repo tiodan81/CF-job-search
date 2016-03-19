@@ -12,8 +12,17 @@
     <option value="ux">UX</option>
   </select>
 
-  <label for="location">Location</label>
-  <select id="location" data-ng-model="city" data-ng-options="job.city as job.city group by job.state for job in jobs | unique:'city'">
+  <label for="State">State</label>
+  <select id="State" data-ng-model="state"
+                     data-ng-change="resetCity()"
+                     data-ng-options="job.state as job.state for job in jobs | unique:'state'">
+    <option value="">Any</option>
+  </select>
+
+  <label for="City" data-ng-show="state">City</label>
+  <select id="City" data-ng-show="state"
+                    data-ng-model="city"
+                    data-ng-options="job.city as job.city for job in jobs | unique:'city' | filter:filterFunction('state')">
     <option value="">Any</option>
   </select>
 
@@ -27,7 +36,11 @@
     <option value="huge">Huge</option>
   </select>
 </div>
-<div class="job-list" data-ng-repeat="job in jobs | filter:keyword | filter:stackFunction | filter:cityFunction | filter:sizeFunction">
+<div class="job-list" data-ng-repeat="job in jobs | filter:keyword |
+                                                    filter:stackFunction |
+                                                    filter:filterFunction('state') |
+                                                    filter:filterFunction('city') |
+                                                    filter:filterFunction('size')">
   <div class="job-item">
     <a href="#/company/{{job.company}}">{{job.company}}</a><br>
     City: {{job.city}}<br>

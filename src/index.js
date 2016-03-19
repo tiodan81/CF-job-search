@@ -1,4 +1,6 @@
 require('file?name=[name].[ext]!./index.html');
+require('file?name=[name].[ext]!./templates/company_template.html');
+require('file?name=[name].[ext]!./templates/job_search_template.html');
 require('./scss/application.scss');
 require('angular');
 require('angular-route');

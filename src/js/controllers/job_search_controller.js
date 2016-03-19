@@ -9,19 +9,19 @@ module.exports = function(app) {
       return job[$scope.stack];
     };
 
-    $scope.cityFunction = function(job) {
-      if (!$scope.city) {
-        return true;
+    $scope.resetCity = function() {
+      if (!$scope.state) {
+        $scope.city = '';
       }
-      return $scope.city === job.city;
     };
 
-    $scope.sizeFunction = function(job) {
-      if (!$scope.size) {
-        return true;
-      }
-      return $scope.size === job.size;
+    $scope.filterFunction = function(filterBy) {
+      return function(job) {
+        if (!$scope[filterBy]) {
+          return true;
+        }
+        return $scope[filterBy] === job[filterBy];
+      };
     };
-
   }]);
 };
