@@ -76,7 +76,7 @@ var fakeData = [
   },
   {
   	"company": "Google",
-  	"state": "",
+  	"state": "Washinton D.C.",
   	"city": "Washington D.C.",
   	"country": "United States",
   	"size": "small",
@@ -91,7 +91,7 @@ var fakeData = [
   },
   {
   	"company": "Yahoo",
-  	"state": "",
+  	"state": "UK",
   	"city": "London",
   	"country": "United Kingdom",
   	"size": "large",
