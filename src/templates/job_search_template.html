@@ -1,0 +1,54 @@
+<div class="side-bar">
+  <label for="keyword">Keyword</label>
+  <input type="text" name="keyword" id="keyword" data-ng-model="keyword"></input>
+
+  <label for="stack">Stack</label>
+  <select id="stack" data-ng-model="stack">
+    <option value="">Any</option>
+    <option value="ios">iOS</option>
+    <option value="ruby">Ruby</option>
+    <option value="js">JavaScript</option>
+    <option value="python">Python</option>
+    <option value="ux">UX</option>
+  </select>
+
+  <label for="State">State</label>
+  <select id="State" data-ng-model="state"
+                     data-ng-change="resetCity()"
+                     data-ng-options="job.state as job.state for job in jobs | unique:'state'">
+    <option value="">Any</option>
+  </select>
+
+  <label for="City" data-ng-show="state">City</label>
+  <select id="City" data-ng-show="state"
+                    data-ng-model="city"
+                    data-ng-options="job.city as job.city for job in jobs | unique:'city' | filter:filterFunction('state')">
+    <option value="">Any</option>
+  </select>
+
+  <label for="size">Company Size</label>
+  <select id="size" data-ng-model="size">
+    <option value="">Any</option>
+    <option value="tiny">Tiny</option>
+    <option value="small">Small</option>
+    <option value="medium">Medium</option>
+    <option value="large">Large</option>
+    <option value="huge">Huge</option>
+  </select>
+</div>
+<div class="job-list" data-ng-repeat="job in jobs | filter:keyword |
+                                                    filter:stackFunction |
+                                                    filter:filterFunction('state') |
+                                                    filter:filterFunction('city') |
+                                                    filter:filterFunction('size')">
+  <div class="job-item">
+    <a href="#/company/{{job.company}}">{{job.company}}</a><br>
+    City: {{job.city}}<br>
+    Size: {{job.size}}<br>
+    iOS: {{job.ios}}<br>
+    Ruby: {{job.ruby}}<br>
+    Python: {{job.python}}<br>
+    JavaScript: {{job.js}}<br>
+    UX: {{job.ux}}<br>
+  </div>
+</div>

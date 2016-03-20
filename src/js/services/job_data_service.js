@@ -1,7 +1,6 @@
-/*Sizes: tiny, small, medium, large, huge
-[
+var fakeData = [
   {
-  	"company": "Disney",
+  	"company": "Alaska Airlines",
   	"state": "WA",
   	"city": "Seattle",
   	"country": "United States",
@@ -33,7 +32,7 @@
   {
   	"company": "Microsoft",
   	"state": "WA",
-  	"city": "Bellevue",
+  	"city": "Seattle",
   	"country": "United States",
   	"size": "huge",
   	"lastHire": "3/1/2015",
@@ -77,7 +76,7 @@
   },
   {
   	"company": "Google",
-  	"state": "",
+  	"state": "Washinton D.C.",
   	"city": "Washington D.C.",
   	"country": "United States",
   	"size": "small",
@@ -92,7 +91,7 @@
   },
   {
   	"company": "Yahoo",
-  	"state": "",
+  	"state": "UK",
   	"city": "London",
   	"country": "United Kingdom",
   	"size": "large",
@@ -165,4 +164,22 @@
     "ux": 7,
     "url": "http://www.apple.com"
   }
-]
+];
+
+module.exports = function(app) {
+  app.factory('jobData', function() {
+    return {
+      getJobs: function() {
+        return fakeData;
+      },
+      getCompany: function(company) {
+        for (var i = 0; i < fakeData.length; i++) {
+          if (fakeData[i].company === company) {
+            return fakeData[i];
+          }
+        }
+        return false;
+      }
+    };
+  });
+};
