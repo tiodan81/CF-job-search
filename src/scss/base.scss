@@ -1,15 +1,22 @@
+@import url(https://fonts.googleapis.com/css?family=Pontano+Sans|Monda:700);
 
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    /* Set your content font stack here: */
+    font-family: 'Pontano Sans', sans-serif;
+}
 
+header {
+  background-color: black;
+  margin-bottom: 20px;
+  h1 {
+    margin: 0 16.66%;
+    font-family: 'Monda', sans-serif;
+    color: white;
+    font-size: 1.5em;
+  }
+}
 
-// h1 {
-//   color: red;
-// }
-//
-// main{
-// 	display: flex;
-// 	justify-content: space-between;
-// }
-//
 .side-bar{
 	display: inline-block;
   border-right: 2px solid black;
@@ -27,6 +34,7 @@
 .job {
   margin: 0 0 25px 28px;
   line-height: 20px;
+  // font-size: 1.2em;
   span {
     margin-right: 30px;
   }
