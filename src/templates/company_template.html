@@ -1,12 +1,23 @@
-{{company.company}}<br>
-City: {{company.city}}<br>
-iOS: {{company.ios}}<br>
-Ruby: {{company.ruby}}<br>
-Python: {{company.python}}<br>
-JavaScript: {{company.js}}<br>
-UX: {{company.ux}}<br>
-<div data-ng-show="glassdoor" data-ng-init="getGlassdoor()">
-  Website: <a href="{{glassdoor.website}}">{{glassdoor.website}}</a><br>
-  <img data-ng-src="{{glassdoor.squareLogo}}"><br>
-  Rating: {{glassdoor.overallRating}}
+<div class="pure-u-1-2 company" data-ng-init="getGlassdoor()">
+  <h1>{{company.company}}</h1>
+  <img data-ng-src="{{glassdoor.squareLogo}}">
+  State: {{company.state}}<br>
+  City: {{company.city}}<br>
+  <p>Website: <a href="{{glassdoor.website}}">{{glassdoor.website}}</a></p>
+  <p>Glassdoor Rating: {{glassdoor.overallRating}}</p>
+  Hired {{company.ios + company.ruby + company.python + company.javascript + company.ux}} from Code Fellows<br>
+  <table class="pure-table pure-table-horizontal" data-ng-if="company.hires.length">
+    <thead>
+      <tr>
+        <th>Job Title</th>
+        <th>Stack</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="positions" data-ng-repeat="position in company.hires">
+        <td>{{position.position}}</te>
+        <td>{{stacks[position.stack]}}</te>
+      </tr>
+    </tbody>
+  </table>
 </div>

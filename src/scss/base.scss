@@ -41,18 +41,23 @@ header {
 .job {
   margin: 0 0 25px 28px;
   line-height: 20px;
-  // font-size: 1.2em;
   span {
     margin-right: 30px;
   }
 }
-//
-// .job-list{
-// 	width: 60%;
-// 	display: inline-block;
-// }
-//
-// .job-item{
-// 	padding: 5% 0;
-// 	border-bottom: 1px solid #000;
-// }
+
+.company {
+  margin: 0 auto;
+  line-height: 25px;
+  img {
+    position: relative;
+    top: -55px;
+    float: right;
+  }
+  p {
+    margin: 0;
+  }
+  .pure-table {
+    margin: 20px auto;
+  }
+}
