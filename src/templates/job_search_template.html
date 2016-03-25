@@ -43,7 +43,7 @@
 </div>
 <div class="job-list pure-u-1-2">
   <div class="job"
-       data-ng-style="{visibility: (keyword || stack || city || state || size) ? 'visible' : 'hidden'}"
+       data-ng-if="keyword || stack || city || state || size"
        data-ng-repeat="job in jobs | filter:keyword |
                                      filter:stackFunction |
                                      filter:filterFunction('state') |

@@ -1,12 +1,12 @@
-<div class="pure-u-1-2 company" data-ng-init="getGlassdoor()">
+<div class="company pure-u-1-2" data-ng-init="getGlassdoor()">
   <h1>{{company.company}}</h1>
-  <img data-ng-src="{{glassdoor.squareLogo}}">
+  <img data-ng-show="glassdoor" data-ng-src="{{glassdoor.squareLogo}}">
   State: {{company.state}}<br>
   City: {{company.city}}<br>
-  <p>Website: <a href="{{glassdoor.website}}">{{glassdoor.website}}</a></p>
-  <p>Glassdoor Rating: {{glassdoor.overallRating}}</p>
+  <p data-ng-show="glassdoor">Website: <a href="{{glassdoor.website}}">{{glassdoor.website}}</a></p>
+  <p data-ng-show="glassdoor">Glassdoor Rating: {{glassdoor.overallRating}} / 5</p>
   Hired {{company.ios + company.ruby + company.python + company.javascript + company.ux}} from Code Fellows<br>
-  <table class="pure-table pure-table-horizontal" data-ng-if="company.hires.length">
+  <table class="pure-table pure-table-horizontal">
     <thead>
       <tr>
         <th>Job Title</th>
