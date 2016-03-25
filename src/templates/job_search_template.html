@@ -15,7 +15,7 @@
   <label for="State">State:</label>
   <select id="State" data-ng-model="state"
                      data-ng-change="resetCity()"
-                     data-ng-options="job.state as job.state for job in jobs | unique:'state'">
+                     data-ng-options="job.state as job.state for job in jobs | unique:'state' | orderBy:'state'">
     <option value="">Any</option>
   </select>
 
