@@ -10,16 +10,27 @@
 // 	justify-content: space-between;
 // }
 //
-// .side-bar{
-// 	width: 30%;
-// 	display: inline-block;
-// 	padding: 5% 0;
-//
-// 	input, label{
-// 		width: 48%;
-// 		display: inline-block;
-// 	}
-// }
+.side-bar{
+	display: inline-block;
+  border-right: 2px solid black;
+  input {
+
+  }
+  input, label{
+		display: block;
+	}
+  input, select {
+    margin-bottom: 15px;
+    width: 85%;
+  }
+}
+.job {
+  margin: 0 0 25px 28px;
+  line-height: 20px;
+  span {
+    margin-right: 30px;
+  }
+}
 //
 // .job-list{
 // 	width: 60%;
