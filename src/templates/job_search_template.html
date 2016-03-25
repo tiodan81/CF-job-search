@@ -7,7 +7,7 @@
     <option value="">Any</option>
     <option value="ios">iOS</option>
     <option value="ruby">Ruby</option>
-    <option value="js">JavaScript</option>
+    <option value="javascript">JavaScript</option>
     <option value="python">Python</option>
     <option value="ux">UX</option>
   </select>
@@ -29,26 +29,28 @@
   <label for="size">Company Size</label>
   <select id="size" data-ng-model="size">
     <option value="">Any</option>
-    <option value="tiny">Tiny</option>
-    <option value="small">Small</option>
-    <option value="medium">Medium</option>
-    <option value="large">Large</option>
-    <option value="huge">Huge</option>
+    <option value="<10">Tiny</option>
+    <option value="10-100">Small</option>
+    <option value="100-1,000">Medium</option>
+    <option value="1,000-10,000">Large</option>
+    <option value="10,000+">Huge</option>
   </select>
 </div>
-<div class="job-list" data-ng-repeat="job in jobs | filter:keyword |
-                                                    filter:stackFunction |
-                                                    filter:filterFunction('state') |
-                                                    filter:filterFunction('city') |
-                                                    filter:filterFunction('size')">
-  <div class="job-item">
-    <a href="#/company/{{job.company}}">{{job.company}}</a><br>
-    City: {{job.city}}<br>
-    Size: {{job.size}}<br>
-    iOS: {{job.ios}}<br>
-    Ruby: {{job.ruby}}<br>
-    Python: {{job.python}}<br>
-    JavaScript: {{job.js}}<br>
-    UX: {{job.ux}}<br>
+<div class="job-list">
+  <div data-ng-repeat="job in jobs | filter:keyword |
+                                                      filter:stackFunction |
+                                                      filter:filterFunction('state') |
+                                                      filter:filterFunction('city') |
+                                                      filter:filterFunction('size')">
+    <div class="job-item">
+      <a href="#/company/{{job.company}}">{{job.company}}</a><br>
+      City: {{job.city}}<br>
+      Size: {{job.size}}<br>
+      iOS: {{job.ios}}<br>
+      Ruby: {{job.ruby}}<br>
+      Python: {{job.python}}<br>
+      JavaScript: {{job.javascript}}<br>
+      UX: {{job.ux}}<br>
+    </div>
   </div>
 </div>
