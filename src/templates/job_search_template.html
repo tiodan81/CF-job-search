@@ -36,19 +36,21 @@
     <option value="10,000+">Huge</option>
   </select>
 </div>
-<div class="job-list" data-ng-repeat="job in jobs | filter:keyword |
-                                                    filter:stackFunction |
-                                                    filter:filterFunction('state') |
-                                                    filter:filterFunction('city') |
-                                                    filter:filterFunction('size')">
-  <div class="job-item">
-    <a href="#/company/{{job.company}}">{{job.company}}</a><br>
-    City: {{job.city}}<br>
-    Size: {{job.size}}<br>
-    iOS: {{job.ios}}<br>
-    Ruby: {{job.ruby}}<br>
-    Python: {{job.python}}<br>
-    JavaScript: {{job.javascript}}<br>
-    UX: {{job.ux}}<br>
+<div class="job-list">
+  <div data-ng-repeat="job in jobs | filter:keyword |
+                                                      filter:stackFunction |
+                                                      filter:filterFunction('state') |
+                                                      filter:filterFunction('city') |
+                                                      filter:filterFunction('size')">
+    <div class="job-item">
+      <a href="#/company/{{job.company}}">{{job.company}}</a><br>
+      City: {{job.city}}<br>
+      Size: {{job.size}}<br>
+      iOS: {{job.ios}}<br>
+      Ruby: {{job.ruby}}<br>
+      Python: {{job.python}}<br>
+      JavaScript: {{job.javascript}}<br>
+      UX: {{job.ux}}<br>
+    </div>
   </div>
 </div>
