@@ -15,8 +15,8 @@ header {
   margin-bottom: 20px;
   img {
     position: relative;
-    top: 13px;
-    margin-left: 16%;
+    top: 15px;
+    margin: 0 20px 0 16%;
   }
   h1 {
     display: inline-block;
@@ -39,17 +39,15 @@ header {
 	}
   input, select {
     margin-bottom: 15px;
-    width: 85%;
+    width: 65%;
   }
   label {
     margin-bottom: 5px;
   }
 }
-.job-list {
 
-}
 .job {
-  margin: 0 0 25px 28px;
+  margin: 0 0 25px 70px;
   line-height: 20px;
   span {
     margin-right: 30px;
@@ -60,11 +58,11 @@ header {
   margin: 0 auto;
   line-height: 25px;
   h1 {
-    margin: 0 0 15px 0;
+    margin: 10px 0 15px 0;
   }
   img {
     position: relative;
-    top: -55px;
+    top: -45px;
     float: right;
     width: 150px;
     height: 150px;
