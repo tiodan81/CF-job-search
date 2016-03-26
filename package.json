@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "./node_modules/webpack/bin/webpack.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -26,10 +28,10 @@
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.14",
-    "webpack-dev-server": "^1.14.1"
-  },
-  "devDependencies": {
+    "webpack-dev-server": "^1.14.1",
     "angular": "^1.5.0",
     "angular-route": "^1.5.0"
+  },
+  "devDependencies": {
   }
 }

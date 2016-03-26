@@ -11,11 +11,11 @@ require('./js')(cfJobSearch);
 
 cfJobSearch.config(['$routeProvider', function($route) {
   $route.when('/', {
-    templateUrl: '/dist/job_search_template.html',
+    templateUrl: '/job_search_template.html',
     controller: 'jobSearchCtrl'
   })
   .when('/company/:name', {
-    templateUrl: '/dist/company_template.html',
+    templateUrl: '/company_template.html',
     controller: 'companyCtrl'
   });
 }]);

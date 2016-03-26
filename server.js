@@ -15,6 +15,6 @@ app.get('/api/glassdoor/:name', function(req, res) {
 
 app.use('/', express.static(__dirname + '/dist'));
 
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3000, function() {
   console.log('server up');
 });
